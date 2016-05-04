@@ -14,5 +14,29 @@
 <li>might be good to include a file of some kind (markdown, text, ??) to keep track of issues/questions/etc</li>
 </ul>
 
+<h2 id="questions">Questions</h2>
+
+<ul>
+<li>Do we need separate tables for STAFF and USERS? (And: an ADMIN, for those who could configure the database. E.g.: default values for things like who gets notifications; add facilitators (if we will have a table for &#8217;em)).</li>
+<li>Should we have a entry/default value of &#8220;NEW&#8221; for <strong>StatusTypeId</strong> for new records in <strong>Program_Requests</strong> table?</li>
+<li>RE: program date: Seems we are going to need another COL in <strong>Program_Requests</strong> table, since the <strong>ProposedDate</strong> COL must allow for fuzzy dates, and the actual program date needs to be a proper DATE datatype so as to allow searching/sorting/filtering by DATE.</li>
+<li></li>
+</ul>
+
+<hr />
+
+<h6 id="extraneousperhapissues">Extraneous (perhap) issues</h6>
+
+<ul>
+<li>best protocol for forward development: MySQLi vs PDF : ??</li>
+</ul>
+
+<h6 id="notere:mysql">Note re: MySQL</h6>
+
+<ul>
+<li><p><a href="http://news.php.net/php.internals/53799">Official php.org note RE: MySQL deprecation</a></p></li>
+<li><p><a href="http://stackoverflow.com/questions/13944956/the-mysql-extension-is-deprecated-and-will-be-removed-in-the-future-use-mysqli">Reasons to NOT use MySQL</a></p></li>
+</ul>
+
 </body>
 </html>
