@@ -7,17 +7,6 @@
 <link href="css/layout.css" rel="stylesheet" type="text/css">
 <link href="css/grid.css" rel="stylesheet" type="text/css">
 
-<!-- 
-		SERVER_DB_CONNECTION_INFO 
-		 
-         The database is dlapluma_awcc
-         I've created two MySQL users:
-         	dlapluma_staff (PWD: $0SyTc9?aS7q ) -- has all privileges
-            dlapluma_web  (PWD: H$hGR9RKuc&b^fy9XvUt ) -- has my guess as to correct (for non-admin access), which is: DELETE, EVENT, INDEX, SELECT, TRIGGER, EXECUTE, INSERT, REFERENCE, SHOW VIEW, UPDATE [PLEASE LET ME KNOW if/how these should be changed.]
-            
-                    
-        
--->
 
 </head>
 
