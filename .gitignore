@@ -2,3 +2,6 @@ _notes
 scss/.sass-cache
 
 *.codekit
+
+.thumbnail*
+.flux/
