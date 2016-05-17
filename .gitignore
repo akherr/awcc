@@ -2,6 +2,7 @@ _notes
 scss/.sass-cache
 dbconnect.php
 *.codekit
-
+nbproject/*
 .thumbnail*
 .flux/
+/nbproject/private/
