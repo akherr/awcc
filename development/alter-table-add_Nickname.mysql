@@ -1,0 +1,4 @@
+
+# I want to add a nickname for user, which would be displayed in programs as initials of who-dunit.
+
+ALTER TABLE `user` ADD `usershortname` VARCHAR(8) NOT NULL AFTER `email`, ADD UNIQUE (`usershortname`) ;
