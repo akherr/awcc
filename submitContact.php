@@ -14,5 +14,7 @@ $sql = "INSERT INTO `Program_Requests` (`ProgramTypeID`, `GroupTypeID`, `Assigne
 
 //make the query and store in result
 $result = $conn->query($sql);
+include ($_SERVER['DOCUMENT_ROOT']."showContacts.php");
 echo "<html><p>$result</p></html>";
+
 ?>
