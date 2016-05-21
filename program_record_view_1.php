@@ -11,11 +11,12 @@
 </head>
 
 <body>
+    <?php include ($_SERVER['DOCUMENT_ROOT']."dbconnect.php"); ?>
 <h1>Client Contact - Record View 1</h1>
 <hr>
 <section class="wrapper"> 
   <!-- From the 'Program_Requests' table -->
-  <form name="form1" method="post" action="">
+  <form name="form1" method="post" action="submitContact.php">
     <input name="ProgramRequestID" type="hidden" value="">
     <div class="row">
       <div class="column-3">
@@ -124,6 +125,8 @@
         <hr>
         <label for="new_note">Session Notes</label>
         <textarea name="new_note" id="new_note" placeholder="Text entered here will create a new Note for this record"></textarea>
+        <label for="submitContact">Submit Contact</label>
+        <input type="submit" name="submitContact" id="SubmitContact">
       </div>
       <div class="column-3">
         <p>I'm thinking this is where we'd put the 'notes.' Maybe they should be previews here, w/ links to full?</p>

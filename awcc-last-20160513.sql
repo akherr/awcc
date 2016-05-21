@@ -122,7 +122,14 @@ CREATE TABLE IF NOT EXISTS `Program_Types` (
   `Description` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- --------------------------------------------------------
+--
+-- Dumping data for table `Program_Types`
+--
+
+INSERT INTO `Program_Types` (`ProgramTypeID`, `Name`, `Description`) VALUES
+(1, 'Ropes Course', 'Scaling walls, doing knots, just rope things'),
+(2, 'Zip Lines', '500ft zip lines, in two rows, 100ft off the ground'),
+(3, 'Human Pyramid', 'Human pyramid wall, max bottom row of 6');
 
 --
 -- Table structure for table `Status_Types`
