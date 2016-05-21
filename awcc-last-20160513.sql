@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `Notes` (
 --
 
 CREATE TABLE IF NOT EXISTS `Program_Requests` (
-  `ProgramRequestID` int(11) NOT NULL AUTO_INCREMENT,
+  `ProgramRequestID` int(11) NOT NULL,
   `ProgramTypeID` int(11) DEFAULT NULL,
   `GroupTypeID` int(11) DEFAULT NULL,
   `AssignedUserID` int(11) DEFAULT NULL,
