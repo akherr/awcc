@@ -17,7 +17,7 @@ for($i=0; $i<$numfields; $i++)
 echo '</tr>';
 
 while($row = $results->fetch_assoc()) {
-    echo '<tr><td>' . $row['ProgramRqeuestID'] . '</td>';
+    echo '<tr><td>' . $row['ProgramRequestID'] . '</td>';
     echo '<td>' . $row['ProgramTypeID'] . '</td>';
     echo '<td>' . $row['GroupTypeID'] . '</td>';
     echo '<td>' . $row['AssignedUserID'] . '</td>';
