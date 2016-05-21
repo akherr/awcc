@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `Notes` (
 --
 
 CREATE TABLE IF NOT EXISTS `Program_Requests` (
-  `ProgramRequestID` int(11) NOT NULL AUTO_INCREMENT,
+  `ProgramRequestID` int(11) NOT NULL,
   `ProgramTypeID` int(11) DEFAULT NULL,
   `GroupTypeID` int(11) DEFAULT NULL,
   `AssignedUserID` int(11) DEFAULT NULL,
@@ -100,17 +100,16 @@ CREATE TABLE IF NOT EXISTS `Program_Requests` (
   `EstimatedCost` varchar(254) DEFAULT NULL,
   `ClientMessage` varchar(10000) DEFAULT NULL,
   `UpdateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `CreatedDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY_KEY (ProgramRequestID)
+  `CreatedDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `Program_Requests`
 --
 
-INSERT INTO `Program_Requests` (`ProgramTypeID`, `GroupTypeID`, `AssignedUserID`, `StatusTypeID`, `FirstName`, `LastName`, `Phone`, `Email`, `Company`, `Role`, `ProposedLocation`, `ProposedDate`, `NumberParticipants`, `EstimatedCost`, `ClientMessage`, `UpdateTime`, `CreatedDate`) VALUES
-(NULL, NULL, NULL, NULL, 'Elvis', 'Presley', '404-777-1234', 'elvis@washere.com', 'The Big Music Machine', 'Lead singer', NULL, NULL, NULL, NULL, 'I''d like an event to kick off my tour next year. I''ve got a new band, new roadies, and my old management team. We need to get acquainted, and we have to come up with some plans and best practices for the tour. Best time: sometime this summer, depending on everyone''s schedules. Could we do this in one or two days?', '2016-05-03 16:00:55', '0000-00-00 00:00:00'),
-(NULL, NULL, NULL, NULL, 'Bobby', 'Billy', '555-123-4567', 'me@you.com', 'Company A', 'Head Honcho', NULL, NULL, NULL, NULL, 'I need teamwork, and I need it now!', '2016-05-03 16:00:55', '0000-00-00 00:00:00');
+INSERT INTO `Program_Requests` (`ProgramRequestID`, `ProgramTypeID`, `GroupTypeID`, `AssignedUserID`, `StatusTypeID`, `FirstName`, `LastName`, `Phone`, `Email`, `Company`, `Role`, `ProposedLocation`, `ProposedDate`, `NumberParticipants`, `EstimatedCost`, `ClientMessage`, `UpdateTime`, `CreatedDate`) VALUES
+(1, NULL, NULL, NULL, NULL, 'Elvis', 'Presley', '404-777-1234', 'elvis@washere.com', 'The Big Music Machine', 'Lead singer', NULL, NULL, NULL, NULL, 'I''d like an event to kick off my tour next year. I''ve got a new band, new roadies, and my old management team. We need to get acquainted, and we have to come up with some plans and best practices for the tour. Best time: sometime this summer, depending on everyone''s schedules. Could we do this in one or two days?', '2016-05-03 16:00:55', '0000-00-00 00:00:00'),
+(2, NULL, NULL, NULL, NULL, 'Bobby', 'Billy', '555-123-4567', 'me@you.com', 'Company A', 'Head Honcho', NULL, NULL, NULL, NULL, 'I need teamwork, and I need it now!', '2016-05-03 16:00:55', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -253,6 +252,9 @@ ALTER TABLE `Notes`
 --
 ALTER TABLE `Program_Types`
   MODIFY `ProgramTypeID` int(11) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `Program_Requests`
+  MODIFY `ProgramRequestID` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `Status_Types`
 --
