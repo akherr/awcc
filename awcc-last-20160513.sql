@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `Notes` (
 --
 
 CREATE TABLE IF NOT EXISTS `Program_Requests` (
-  `ProgramRequestID` int(11) NOT NULL,
+  `ProgramRequestID` int(11) NOT NULL AUTO_INCREMENT,
   `ProgramTypeID` int(11) DEFAULT NULL,
   `GroupTypeID` int(11) DEFAULT NULL,
   `AssignedUserID` int(11) DEFAULT NULL,
@@ -247,11 +247,6 @@ ALTER TABLE `Group_Types`
 --
 ALTER TABLE `Notes`
   MODIFY `NoteID` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `Program_Requests`
---
-ALTER TABLE `Program_Requests`
-  MODIFY `ProgramRequestID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `Program_Types`
 --
