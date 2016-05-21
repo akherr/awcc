@@ -107,8 +107,8 @@ CREATE TABLE IF NOT EXISTS `Program_Requests` (
 -- Dumping data for table `Program_Requests`
 --
 
-INSERT INTO `Program_Requests` (`ProgramRequestID`, `ProgramTypeID`, `GroupTypeID`, `AssignedUserID`, `StatusTypeID`, `FirstName`, `LastName`, `Phone`, `Email`, `Company`, `Role`, `ProposedLocation`, `ProposedDate`, `NumberParticipants`, `EstimatedCost`, `ClientMessage`, `UpdateTime`, `CreatedDate`) VALUES
-(1, NULL, NULL, NULL, NULL, 'Elvis', 'Presley', '404-777-1234', 'elvis@washere.com', 'The Big Music Machine', 'Lead singer', NULL, NULL, NULL, NULL, 'I''d like an event to kick off my tour next year. I''ve got a new band, new roadies, and my old management team. We need to get acquainted, and we have to come up with some plans and best practices for the tour. Best time: sometime this summer, depending on everyone''s schedules. Could we do this in one or two days?', '2016-05-03 16:00:55', '0000-00-00 00:00:00');
+INSERT INTO `Program_Requests` (`ProgramTypeID`, `GroupTypeID`, `AssignedUserID`, `StatusTypeID`, `FirstName`, `LastName`, `Phone`, `Email`, `Company`, `Role`, `ProposedLocation`, `ProposedDate`, `NumberParticipants`, `EstimatedCost`, `ClientMessage`, `UpdateTime`, `CreatedDate`) VALUES
+(NULL, NULL, NULL, NULL, 'Elvis', 'Presley', '404-777-1234', 'elvis@washere.com', 'The Big Music Machine', 'Lead singer', NULL, NULL, NULL, NULL, 'I''d like an event to kick off my tour next year. I''ve got a new band, new roadies, and my old management team. We need to get acquainted, and we have to come up with some plans and best practices for the tour. Best time: sometime this summer, depending on everyone''s schedules. Could we do this in one or two days?', '2016-05-03 16:00:55', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
