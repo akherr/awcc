@@ -100,7 +100,8 @@ CREATE TABLE IF NOT EXISTS `Program_Requests` (
   `EstimatedCost` varchar(254) DEFAULT NULL,
   `ClientMessage` varchar(10000) DEFAULT NULL,
   `UpdateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `CreatedDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00'
+  `CreatedDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY_KEY (ProgramRequestID)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
