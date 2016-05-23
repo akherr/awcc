@@ -3,6 +3,7 @@ scss/.sass-cache
 dbconnect.php
 locdmf_dbconnect.php
 *.codekit
+*.bbprojectd
 nbproject/*
 .thumbnail*
 .flux/

@@ -1,5 +1,5 @@
 <?php
-include ($_SERVER['DOCUMENT_ROOT']."dbconnect.php");
+include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php");
 
 //SQL statement for the insert
 

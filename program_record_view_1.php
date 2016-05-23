@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php include ($_SERVER['DOCUMENT_ROOT']."dbconnect.php"); ?>
+    <?php include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php"); ?>
 <h1>Client Contact - Record View 1</h1>
 <hr>
 <section class="wrapper"> 
