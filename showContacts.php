@@ -1,6 +1,6 @@
 <?php
 
-include ($_SERVER['DOCUMENT_ROOT']."dbconnect.php");
+include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php");
 $results = $conn->query("SELECT * from Program_Requests");
 $numfields = $conn->field_count;
 $numrows = $results->num_rows;
