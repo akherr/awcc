@@ -30,7 +30,7 @@ while($row = $results->fetch_assoc()) {
     echo '<td>' . $row['Role'] . '</td>';
     echo '<td>' . $row['ProposedLocation'] . '</td>';
     echo '<td>' . $row['ProposedDate'] . '</td>';
-    echo '<td>' . $row['NumberPraticipants'] . '</td>';
+    echo '<td>' . $row['NumberParticipants'] . '</td>';
     echo '<td>' . $row['EstimatedCost'] . '</td>';
     echo '<td>' . $row['ClientMessage'] . '</td>';
     echo '<td>' . $row['UpdateTime'] . '</td>';

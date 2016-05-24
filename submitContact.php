@@ -10,7 +10,7 @@ $sql = "INSERT INTO Program_Requests (ProgramTypeID, GroupTypeID, AssignedUserID
 echo "<html><p>debugging so lets pring sql variable</p></html> ";
 echo "<html><p>$sql</p></html>";
 $result = $conn->query($sql);
-include ($_SERVER['DOCUMENT_ROOT']."showContacts.php");
+include ($_SERVER['DOCUMENT_ROOT']."/showContacts.php");
 echo "<html><p>$result</p></html>";
 
 ?>
