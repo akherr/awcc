@@ -1,0 +1,31 @@
+//	posted by mrMarcus
+
+//	http://forums.phpfreaks.com/user/62809-mrmarcus/
+
+//	at: http://forums.phpfreaks.com/topic/271026-please-help-a-noob-simple-honeypot/
+
+
+
+
+$_SESSION['start_time'] = time();
+
+if (isset($_POST['submit'])) {
+
+	$current_time = time();
+
+	if (!empty($_POST['start_time'])) {
+		if (($current_time - $_POST['start_time']) < 5) { // 5 is number of seconds differential; change as you sit fit
+			// someone/something has submitted this form in under 5 seconds from reaching the page
+			// probably a bot
+			exit(0);
+		}
+	}
+}
+?>
+<form action="" method="post">
+	<input type="hidden" name="start_time" value="<?php echo $_SESSION['start_time']; ?>"/>
+
+	<!-- other form fields -->
+
+	<input type="submit" name="submit"/>
+</form>

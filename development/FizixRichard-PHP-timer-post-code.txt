@@ -1,0 +1,44 @@
+FizixRichard
+SitePoint Addict
+Jul '12
+
+The submission time is exactly what I do on my contact forms, it appears to work.
+
+As someone asked for code; its really easy, in PHP (this has no security, its bare bones code):
+
+On the PHP script that loads the form;
+
+<input type="hidden" name="loadtime" value="time();" />
+
+
+So literally insert a timestamp into a hidden field. (with a javascript loading form you'll want to populate this when the user clicks your contact button)
+
+Then on your post php script (where you send the email):
+
+$loadtime = $_POST['loadtime'];
+
+$totaltime = time() - $loadtime;
+
+if($totaltime < 7)
+{
+   echo("You took less than 7 seconds to complete the form, blah blah blah");
+   exit;
+}
+
+So grab the post time timestamp from the form, get the current time in a timestamp, get the load time as current_time - post_time, if the load time is less than 7, spring an error.
+
+If your using a javascript form that opens in an overlay, have the javascript complete the timestamp; then do any time conversion if necessary.
+
+It may not be 100% foolproof, but it definitely helps. I don't use the honeypot exactly because of screen readers. You don't want anything obstructing legitimate users, especially not those stuck behind accessibility software.
+
+My timer is set to 7 seconds, which when you consider they have to enter an email address, name and a message is reasonable. The only way I can make the timer error appear on my forms is to hit the keyboard with 4 fingers on the first field, have the email ready populated via double clicking and selecting quickly and hitting the keyboard with 4 fingers again in the message and hitting submit. I have to do that like a hyperactive 3 year old to get the error, so I'm pretty confident that nobody legitimate will ever see that error unless they sit there trying to get it.
+
+Now I have revealed it... please don't frowning
+
+1 Reply
+
+ralphmadministratorJul '12
+Thanks for this, FizixRichard. I looks forward to giving it a try. I wasn't sure if you could do something like
+
+$totaltime = time() - $loadtime;
+but glad to know you can. smile
