@@ -1,0 +1,1 @@
+ALTER TABLE `Program_Req_Status` ADD FOREIGN KEY (`Program_Req_ID`) REFERENCES `dlapluma_awcc`.`Program_Requests`(`ProgramRequestID`) ON DELETE CASCADE ON UPDATE CASCADE;
