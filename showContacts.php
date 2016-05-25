@@ -1,6 +1,6 @@
 <?php
 
-include ($_SERVER['DOCUMENT_ROOT']."dbconnect.php");
+include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php");
 $results = $conn->query("SELECT * from Program_Requests");
 $numfields = $conn->field_count;
 $numrows = $results->num_rows;
@@ -30,7 +30,7 @@ while($row = $results->fetch_assoc()) {
     echo '<td>' . $row['Role'] . '</td>';
     echo '<td>' . $row['ProposedLocation'] . '</td>';
     echo '<td>' . $row['ProposedDate'] . '</td>';
-    echo '<td>' . $row['NumberPraticipants'] . '</td>';
+    echo '<td>' . $row['NumberParticipants'] . '</td>';
     echo '<td>' . $row['EstimatedCost'] . '</td>';
     echo '<td>' . $row['ClientMessage'] . '</td>';
     echo '<td>' . $row['UpdateTime'] . '</td>';

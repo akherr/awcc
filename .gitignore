@@ -1,8 +1,8 @@
 _notes
 scss/.sass-cache
-dbconnect.php
-locdmf_dbconnect.php
+*dbconnect.php
 *.codekit
+*.bbprojectd
 nbproject/*
 .thumbnail*
 .flux/
