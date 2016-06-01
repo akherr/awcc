@@ -11,8 +11,13 @@
 </head>
 
 <body>
-    <?php include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php"); ?>
-<h1>Client Contact - Record View 1</h1>
+<!-- 
+//    <?php include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php"); ?>
+     -->
+      <?php include ("dbconnect.php"); ?>
+   
+     
+     <h1>Client Contact - Record View 1</h1>
 <hr>
 <section class="wrapper"> 
   <!-- From the 'Program_Requests' table -->
