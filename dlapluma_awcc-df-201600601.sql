@@ -277,21 +277,21 @@ ALTER TABLE `Users`
 -- Constraints for table `notes`
 --
 ALTER TABLE `Notes`
-  ADD CONSTRAINT `notes_ibfk_1` FOREIGN KEY (`note_author`) REFERENCES `users` (`user_id`),
-  ADD CONSTRAINT `fk_80FAB6EE-1871-49E8-A140-52FC0A36548E` FOREIGN KEY (`program_request_id`) REFERENCES `program_requests` (`program_request_id`);
+  ADD CONSTRAINT `notes_ibfk_1` FOREIGN KEY (`note_author`) REFERENCES `Users` (`user_id`),
+  ADD CONSTRAINT `fk_80FAB6EE-1871-49E8-A140-52FC0A36548E` FOREIGN KEY (`program_request_id`) REFERENCES `Program_Requests` (`program_request_id`);
 
 --
 -- Constraints for table `program_requests`
 --
 ALTER TABLE `Program_Requests`
-  ADD CONSTRAINT `program_requests_ibfk_1` FOREIGN KEY (`assigned_user_id`) REFERENCES `users` (`user_id`),
-  ADD CONSTRAINT `fk_38BC89BB-2A94-4633-94F9-110911028F7A` FOREIGN KEY (`program_type_id`) REFERENCES `program_types` (`program_type_id`),
-  ADD CONSTRAINT `fk_3AC84605-658F-4540-8221-7B27587A6E49` FOREIGN KEY (`group_type_id`) REFERENCES `group_types` (`group_type_id`);
+  ADD CONSTRAINT `program_requests_ibfk_1` FOREIGN KEY (`assigned_user_id`) REFERENCES `Users` (`user_id`),
+  ADD CONSTRAINT `fk_38BC89BB-2A94-4633-94F9-110911028F7A` FOREIGN KEY (`program_type_id`) REFERENCES `Program_Types` (`program_type_id`),
+  ADD CONSTRAINT `fk_3AC84605-658F-4540-8221-7B27587A6E49` FOREIGN KEY (`group_type_id`) REFERENCES `Group_Types` (`group_type_id`);
 
 --
 -- Constraints for table `program_req_status`
 --
 ALTER TABLE `Program_Req_Status`
-  ADD CONSTRAINT `program_req_status_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `program_req_status_ibfk_1` FOREIGN KEY (`program_req_id`) REFERENCES `program_requests` (`program_request_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `program_req_status_ibfk_2` FOREIGN KEY (`status_type_id`) REFERENCES `status_types` (`status_type_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `program_req_status_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `program_req_status_ibfk_1` FOREIGN KEY (`program_req_id`) REFERENCES `Program_Requests` (`program_request_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `program_req_status_ibfk_2` FOREIGN KEY (`status_type_id`) REFERENCES `Status_Types` (`status_type_id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
