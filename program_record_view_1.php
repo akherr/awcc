@@ -105,15 +105,15 @@
       </div>
       <div class="column-6">
         <label for="first_name">First Name</label>
-        <input type="text" name="i_first_name" id="i_first_name">
+        <input type="text" name="i_first_name" id="first_name">
         <label for="last_name">Last Name</label>
-        <input type="text" name="i_last_name" id="i_last_name">
+        <input type="text" name="i_last_name" id="last_name">
         <label for="organization">Company/Organization</label>
-        <input type="text" name="i_company" id="organization">
+        <input type="text" name="i_company" id="company">
         <label for="role">Title/Role</label>
         <input type="text" name="i_role" id="role">
         <label for="eddress">Email address</label>
-        <input type="text" name="i_email" id="eddress">
+        <input type="text" name="i_email" id="email">
         <label for="phone">Telephone</label>
         <input type="text" name="i_phone" id="phone">
         <label for="message">Message</label>
