@@ -17,24 +17,24 @@ for($i=0; $i<$numfields; $i++)
 echo '</tr>';
 
 while($row = $results->fetch_assoc()) {
-    echo '<tr><td>' . $row['ProgramRequestID'] . '</td>';
-    echo '<td>' . $row['ProgramTypeID'] . '</td>';
-    echo '<td>' . $row['GroupTypeID'] . '</td>';
-    echo '<td>' . $row['AssignedUserID'] . '</td>';
-    echo '<td>' . $row['StatusTypeID'] . '</td>';
-    echo '<td>' . $row['FirstName'] . '</td>';
-    echo '<td>' . $row['LastName'] . '</td>';
-    echo '<td>' . $row['Phone'] . '</td>';
-    echo '<td>' . $row['Email'] . '</td>';
-    echo '<td>' . $row['Company'] . '</td>';
-    echo '<td>' . $row['Role'] . '</td>';
-    echo '<td>' . $row['ProposedLocation'] . '</td>';
-    echo '<td>' . $row['ProposedDate'] . '</td>';
-    echo '<td>' . $row['NumberParticipants'] . '</td>';
-    echo '<td>' . $row['EstimatedCost'] . '</td>';
-    echo '<td>' . $row['ClientMessage'] . '</td>';
-    echo '<td>' . $row['UpdateTime'] . '</td>';
-    echo '<td>' . $row['CreatedDate'] . '</td></tr>';
+    echo '<tr><td>' . $row['program_request_id'] . '</td>';
+    echo '<td>' . $row['program_type_id'] . '</td>';
+    echo '<td>' . $row['group_type_id'] . '</td>';
+    echo '<td>' . $row['assigned_user_id'] . '</td>';
+    echo '<td>' . $row['status_type_id'] . '</td>';
+    echo '<td>' . $row['first_name'] . '</td>';
+    echo '<td>' . $row['last_name'] . '</td>';
+    echo '<td>' . $row['phone'] . '</td>';
+    echo '<td>' . $row['email'] . '</td>';
+    echo '<td>' . $row['company'] . '</td>';
+    echo '<td>' . $row['role'] . '</td>';
+    echo '<td>' . $row['proposed_location'] . '</td>';
+    echo '<td>' . $row['proposed_date'] . '</td>';
+    echo '<td>' . $row['number_participants'] . '</td>';
+    echo '<td>' . $row['estimated_cost'] . '</td>';
+    echo '<td>' . $row['client_message'] . '</td>';
+    echo '<td>' . $row['updated'] . '</td>';
+    echo '<td>' . $row['created'] . '</td></tr>';
     
 }
 
