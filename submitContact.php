@@ -21,7 +21,7 @@ $client_message = filter_input(INPUT_POST, 'client_message', FILTER_SANITIZE_STR
         //. " VALUES($one, $one, $one, $one,'" . $_POST['first_name'] . "','" . $_POST['last_name']. "','" . $_POST['phone'] . "','" . $_POST['eddress'] . "','" . $_POST['organization'] . "','" . $_POST['role'] . "','" . $_POST['ProgramLocation'] . "','" . $_POST['ProgramDate'] . "','" . $_POST['NumberParticipants'] . "','" . $_POST['ProgramCost'] . "', 'TEST MESSAGE')";
         
 
-if ($stmt = $conn->prepare("INSERT INTO  (program_type_id, group_type_id, assigned_user_id, status_type_id, first_name, last_name, phone, email, company, role, proposed_location, proposed_date, number_participants, estimated_cost, client_message) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )")) {
+if ($stmt = $conn->prepare("INSERT INTO Program_Requests (program_type_id, group_type_id, assigned_user_id, status_type_id, first_name, last_name, phone, email, company, role, proposed_location, proposed_date, number_participants, estimated_cost, client_message) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )")) {
  
     // Bind the variables to the parameter as strings. 
     $stmt->bind_param("iiiisssssssssss", $one, $one, $one, $one, $first_name, $last_name, $phone, $email, $company, $role, $proposed_location, $proposed_date, $number_participants, $estimated_cost, $client_message);
@@ -34,8 +34,8 @@ if ($stmt = $conn->prepare("INSERT INTO  (program_type_id, group_type_id, assign
  
 }
 
-echo "<html><p>debugging so lets print sql variable</p></html> ";
-echo "<html><p>$sql</p></html>";
+//echo "<html><p>debugging so lets print sql variable</p></html> ";
+//echo "<html><p>$sql</p></html>";
 //$result = $conn->query($sql);
 include ($_SERVER['DOCUMENT_ROOT']."/showContacts.php");
 echo "<html><p>$result</p></html>";
