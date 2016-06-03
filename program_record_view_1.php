@@ -105,9 +105,9 @@
       </div>
       <div class="column-6">
         <label for="first_name">First Name</label>
-        <input type="text" name="i_first_name" id="first_name">
+        <input type="text" name="i_first_name" id="i_first_name">
         <label for="last_name">Last Name</label>
-        <input type="text" name="i_last_name" id="last_name">
+        <input type="text" name="i_last_name" id="i_last_name">
         <label for="organization">Company/Organization</label>
         <input type="text" name="i_company" id="organization">
         <label for="role">Title/Role</label>
