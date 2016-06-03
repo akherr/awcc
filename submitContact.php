@@ -4,17 +4,17 @@ include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php");
 
 //variables for prepare statement
 $one = 1;
-$first_name = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_STRING);
-$last_name = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_STRING);
-$phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
-$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-$company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING);
-$role = filter_input(INPUT_POST, 'role', FILTER_SANITIZE_STRING);
-$proposed_location = filter_input(INPUT_POST, 'proposed_location', FILTER_SANITIZE_STRING);
-$proposed_date = filter_input(INPUT_POST, 'proposed_date', FILTER_SANITIZE_STRING);
-$number_participants = filter_input(INPUT_POST, 'number_participants', FILTER_SANITIZE_STRING);
-$estimated_cost = filter_input(INPUT_POST, 'estimated_cost', FILTER_SANITIZE_STRING);
-$client_message = filter_input(INPUT_POST, 'client_message', FILTER_SANITIZE_STRING);
+$first_name = filter_input(INPUT_POST, 'i_first_name', FILTER_SANITIZE_STRING);
+$last_name = filter_input(INPUT_POST, 'i_last_name', FILTER_SANITIZE_STRING);
+$phone = filter_input(INPUT_POST, 'i_phone', FILTER_SANITIZE_STRING);
+$email = filter_input(INPUT_POST, 'i_email', FILTER_SANITIZE_STRING);
+$company = filter_input(INPUT_POST, 'i_company', FILTER_SANITIZE_STRING);
+$role = filter_input(INPUT_POST, 'i_role', FILTER_SANITIZE_STRING);
+$proposed_location = filter_input(INPUT_POST, 'i_proposed_location', FILTER_SANITIZE_STRING);
+$proposed_date = filter_input(INPUT_POST, 'i_proposed_date', FILTER_SANITIZE_STRING);
+$number_participants = filter_input(INPUT_POST, 'i_number_participants', FILTER_SANITIZE_STRING);
+$estimated_cost = filter_input(INPUT_POST, 'i_estimated_cost', FILTER_SANITIZE_STRING);
+$client_message = filter_input(INPUT_POST, 'i_client_message', FILTER_SANITIZE_STRING);
 
 //SQL statement for the insert
 //$sql = "INSERT INTO Program_Requests (program_type_id, group_type_id, assigned_user_id, status_type_id, first_name, last_name, phone, email, company, role, proposed_location, proposed_date, number_participants, estimated_cost, client_message)"

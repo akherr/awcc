@@ -105,28 +105,28 @@
       </div>
       <div class="column-6">
         <label for="first_name">First Name</label>
-        <input type="text" name="first_name" id="first_name">
+        <input type="text" name="i_first_name" id="first_name">
         <label for="last_name">Last Name</label>
-        <input type="text" name="last_name" id="last_name">
+        <input type="text" name="i_last_name" id="last_name">
         <label for="organization">Company/Organization</label>
-        <input type="text" name="organization" id="organization">
+        <input type="text" name="i_company" id="organization">
         <label for="role">Title/Role</label>
-        <input type="text" name="role" id="role">
+        <input type="text" name="i_role" id="role">
         <label for="eddress">Email address</label>
-        <input type="text" name="eddress" id="eddress">
+        <input type="text" name="i_email" id="eddress">
         <label for="phone">Telephone</label>
-        <input type="text" name="phone" id="phone">
+        <input type="text" name="i_phone" id="phone">
         <label for="message">Message</label>
-        <textarea name="message" id="message"></textarea>
+        <textarea name="i_client_message" id="message"></textarea>
         <hr>
         <label for="ProgramLocation">Program Location</label>
-        <input type="text" name="ProgramLocation" id="ProgramLocation">
+        <input type="text" name="i_proposed_location" id="ProgramLocation">
         <label for="ProgramDate">Program Date</label>
-        <input type="text" name="ProgramDate" id="ProgramDate">
+        <input type="text" name="i_proposed_date" id="ProgramDate">
         <label for="NumberParticipants">Number of Participants</label>
-        <input type="text" name="NumberParticipants" id="NumberParticipants">
+        <input type="text" name="i_number_participants" id="NumberParticipants">
         <label for="ProgramCost">Program Cost</label>
-        <input type="text" name="ProgramCost" id="ProgramCost">
+        <input type="text" name="i_estimated_cost" id="ProgramCost">
         <hr>
         <label for="new_note">Session Notes</label>
         <textarea name="new_note" id="new_note" placeholder="Text entered here will create a new Note for this record"></textarea>
