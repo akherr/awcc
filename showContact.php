@@ -1,23 +1,20 @@
 <?php
-
 include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php");
-$results = $conn->query("SELECT * from Program_Requests");
-$numfields = $conn->field_count;
-$numrows = $results->num_rows;
 
-echo '<html><p> Number of Fields: ' . $numfields . ' Number of rows: ' . $numrows . '</p>';
-echo "<table border='1' id='resultstable'><tr>";
+$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+$contact;
 
-for($i=0; $i<$numfields; $i++)
-{
-    $fieldinfo = mysqli_fetch_field_direct($results, $i);
-    echo "<td id='tableheaders'>" . $fieldinfo->name . "</td>";
-}
-
-echo '</tr>';
-
-while($row = $results->fetch_assoc()) {
-    echo '<a href="showContact.php?id=' . $row['program_request_id'] . '">' . $row['company'] . '</a>';
+if ($stmt = $conn->prepare("SELECT * FROM Program_Requests WHERE ID = ?")) {
+ 
+    // Bind the variables to the parameter as strings. 
+    $stmt->bind_param("i", $id);
+ 
+    // Execute the statement.
+    $stmt->execute();
+    
+    $result = $stmt->get_result();
+ 
+    $row = $results->fetch_assoc();
     echo '<tr><td>' . $row['program_request_id'] . '</td>';
     echo '<td>' . $row['program_type_id'] . '</td>';
     echo '<td>' . $row['group_type_id'] . '</td>';
@@ -37,7 +34,18 @@ while($row = $results->fetch_assoc()) {
     echo '<td>' . $row['updated'] . '</td>';
     echo '<td>' . $row['created'] . '</td></tr>';
     
+    // Close the prepared statement.
+    $stmt->close();
+ 
 }
 
-echo '</table></html>';
+ else
+     {
+    echo '<html><p>No results found!</p></html>';
+ 
+     
+ }
+
+
+
 ?>
