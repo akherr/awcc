@@ -25,7 +25,7 @@ if ($stmt = $conn->prepare("SELECT * FROM Program_Requests WHERE program_request
 
     for($i=0; $i<$numfields; $i++)
     {
-        $fieldinfo = mysqli_fetch_field_direct($results, $i);
+        $fieldinfo = mysqli_fetch_field_direct($result, $i);
         echo "<td id='tableheaders'>" . $fieldinfo->name . "</td>";
     }
     
