@@ -4,7 +4,7 @@ include ($_SERVER['DOCUMENT_ROOT']."/dbconnect.php");
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $contact;
 
-if ($stmt = $conn->prepare("SELECT * FROM Program_Requests WHERE ID = ?")) {
+if ($stmt = $conn->prepare("SELECT * FROM Program_Requests WHERE program_request_id = ?")) {
  
     // Bind the variables to the parameter as strings. 
     $stmt->bind_param("i", $id);

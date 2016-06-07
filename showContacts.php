@@ -17,8 +17,8 @@ for($i=0; $i<$numfields; $i++)
 echo '</tr>';
 
 while($row = $results->fetch_assoc()) {
-    echo '<a href="showContact.php?id=' . $row['program_request_id'] . '">' . $row['company'] . '</a>';
-    echo '<tr><td>' . $row['program_request_id'] . '</td>';
+    echo '<tr><td><table border = "0"><tr><td><a href="showContact.php?id=' . $row['program_request_id'] . '">' . $row['company'] . '</a></tr></td></td>';
+    echo '<td>' . $row['program_request_id'] . '</td>';
     echo '<td>' . $row['program_type_id'] . '</td>';
     echo '<td>' . $row['group_type_id'] . '</td>';
     echo '<td>' . $row['assigned_user_id'] . '</td>';
