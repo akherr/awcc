@@ -14,7 +14,7 @@ if ($stmt = $conn->prepare("SELECT * FROM Program_Requests WHERE program_request
     
     $result = $stmt->get_result();
  
-    $row = $results->fetch_assoc();
+    $row = $result->fetch_assoc();
     echo '<tr><td>' . $row['program_request_id'] . '</td>';
     echo '<td>' . $row['program_type_id'] . '</td>';
     echo '<td>' . $row['group_type_id'] . '</td>';
